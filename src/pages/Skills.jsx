@@ -21,7 +21,7 @@ const SkillCarousel = () => {
 
   return (
     <section id="skills" className="w-full max-w-6xl mx-auto py-8 px-4 text-white scroll-mt-24 min-h-[80vh]">
-            <h2 className="text-2xl font-bold text-gray-200 uppercase mb-10">Skills</h2>
+      <h2 className="text-2xl font-bold text-gray-200 uppercase mb-10">Skills</h2>
 
 
       <div ref={sliderRef} className="keen-slider overflow-hidden rounded-2xl shadow-xl relative">
@@ -30,17 +30,17 @@ const SkillCarousel = () => {
             key={i}
             className="keen-slider__slide flex justify-center items-center bg-gradient-to-br from-[#111827] to-[#1f2937] relative"
           >
-            <div className="relative w-full max-w-xl px-6 py-10 rounded-2xl text-white">
+            <div className="relative w-full max-w-xl px-8 sm:px-12 py-10 rounded-2xl text-white bg-[#1e1e2f] shadow-lg">
               {/* Arrows inside the card */}
               <button
                 onClick={() => instanceRef.current?.prev()}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-purple-700/60 hover:bg-purple-700 text-white rounded-full p-2 z-10"
+                className="absolute -left-4 sm:left-2 top-1/2 -translate-y-1/2 bg-purple-700/70 hover:bg-purple-700 text-white rounded-full p-2 sm:p-2.5 z-10 shadow-md"
               >
                 <ChevronLeft size={22} />
               </button>
               <button
                 onClick={() => instanceRef.current?.next()}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-700/60 hover:bg-purple-700 text-white rounded-full p-2 z-10"
+                className="absolute -right-4 sm:right-2 top-1/2 -translate-y-1/2 bg-purple-700/70 hover:bg-purple-700 text-white rounded-full p-2 sm:p-2.5 z-10 shadow-md"
               >
                 <ChevronRight size={22} />
               </button>
@@ -68,11 +68,10 @@ const SkillCarousel = () => {
                   <button
                     key={idx}
                     onClick={() => instanceRef.current?.moveToIdx(idx)}
-                    className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                      currentSlide === idx
+                    className={`h-3 w-3 rounded-full transition-all duration-300 ${currentSlide === idx
                         ? "bg-purple-400 scale-110"
                         : "bg-purple-700/40"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>

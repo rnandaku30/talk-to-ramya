@@ -260,37 +260,42 @@ export const projectDetails = {
 export const skills = [
     {
         title: "Languages",
-        items: ["Java", "Python", "Node.js", "JavaScript", "PL/SQL"],
+        items: ["Java", "Python", "JavaScript", "SQL", "PL/SQL"],
     },
     {
-        title: "Frameworks",
-        items: [
-            "Spring Boot",
-            "Hibernate",
-            "React.js",
-            "Nest.js",
-            "TensorFlow",
-            "Keras",
-        ],
+        title: "Frameworks & Libraries",
+        items: ["Spring Boot", "Hibernate", "React.js", "Nest.js", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"],
     },
     {
         title: "Cloud & Databases",
-        items: ["AWS", "Oracle", "PostgreSQL", "MongoDB"],
+        items: ["AWS", "Oracle", "PostgreSQL", "MongoDB", "MySQL"],
     },
     {
         title: "DevOps & Tools",
-        items: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions"],
+        items: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Git", "Postman"],
     },
     {
-        title: "Other",
-        items: [
-            "API Development",
-            "Microservices",
-            "Payment Integrations",
-            "AI/ML",
-        ],
+        title: "Platforms & Architecture",
+        items: ["Node.js", "Microservices", "API Development", "AI/ML", "FastAPI", "Firebase Auth"],
+    },
+    {
+        title: "Analytics & Visualization",
+        items: ["Matplotlib", "Seaborn", "Tableau", "Power BI"],
+    },
+    {
+        title: "AI/NLP Toolkits",
+        items: ["spaCy", "NLTK", "Hugging Face", "OpenAI API", "KeyBERT"],
+    },
+    {
+        title: "Testing & Quality",
+        items: ["JUnit", "PyTest", "Postman", "ESLint"],
+    },
+    {
+        title: "Security",
+        items: ["IAM", "OAuth 2.0", "Environment Variables", "HTTPS"],
     },
 ];
+
 
 
 export const awards = [
