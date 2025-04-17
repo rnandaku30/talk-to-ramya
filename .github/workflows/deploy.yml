@@ -28,7 +28,7 @@ jobs:
       # Step 4: Create .env from GitHub secrets
       - name: Create .env file
         run: |
-          echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> .env
+          echo "VITE_OPENAI_API_KEY=${{ secrets.VITE_OPENAI_API_KEY }}" >> .env
 
       # Step 5: Build the app
       - name: Build React app
