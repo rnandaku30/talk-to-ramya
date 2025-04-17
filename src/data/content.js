@@ -64,7 +64,7 @@ export const experiences = [
     {
         title: "Software Engineer II",
         company: "Ellucian Higher Education Systems",
-        duration: "Jun 2020 – Aug 2023",
+        duration: "Jun 2019 – Aug 2023",
         description: "  As a Software Engineer at Ellucian, I developed and maintained microservices supporting large-scale education platforms. I led the automation of Department for Education (DfE) data processes, reducing manual workload by 80%. My work focused on optimizing ERP integrations through real-time, event-driven pipelines and enhancing interoperability across Finance, Payments, and Student modules.",
         achievements: [
             "Engineered microservices to automate Department for Education (DfE) admissions data, eliminating 80% of manual entry.",
@@ -75,7 +75,7 @@ export const experiences = [
     {
         title: "Software Engineering Intern",
         company: "Ellucian Higher Education Systems",
-        duration: "Mar 2020 – Jun 2020",
+        duration: "Jan 2019 – Jun 2020",
         description: "  During my internship at Ellucian, I designed a flexible file storage system capable of dynamically routing files between AWS S3, on-premise servers, and Oracle databases based on environment configurations. This significantly improved storage efficiency and laid the groundwork for scalable, hybrid infrastructure handling.",
         achievements: [
             "Developed a flexible file storage system supporting AWS S3, on-prem servers, and Oracle DB for optimal storage handling.",
