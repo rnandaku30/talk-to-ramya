@@ -5,7 +5,7 @@ import {
     SparklesIcon,
 } from "@heroicons/react/24/solid";
 import * as content from "../data/content";
-import { askGPT } from "../utils/askGpt";
+import { askGPT } from "../utils/askGPT";
 
 const ChatWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
