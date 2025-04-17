@@ -19,15 +19,20 @@ jobs:
         with:
           node-version: '16'  # Specify your Node.js version here
 
-      # Step 3: Install dependencies
+            # Step 3: Install dependencies
       - name: Install dependencies
-        run: npm install  --legacy-peer-deps # Install dependencies defined in package.json
+        run: npm install --legacy-peer-deps
 
-      # Step 4: Build the React app
+      # Step 4: Create .env from GitHub secrets
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> .env
+
+      # Step 5: Build the app
       - name: Build React app
-        run: npm run build  # This creates the 'build' directory with the production-ready React app
+        run: npm run build
 
-      # Step 5: Deploy to S3
+      # Step 6: Deploy to S3
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
