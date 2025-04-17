@@ -1,0 +1,40 @@
+name: Upload Website
+
+on:
+  push:
+    branches:
+      - main  # Change to 'main' if you are using the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the code
+      - name: Check out code
+        uses: actions/checkout@main  # Corrected version for GitHub Actions checkout
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Specify your Node.js version here
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install  --legacy-peer-deps # Install dependencies defined in package.json
+
+      # Step 4: Build the React app
+      - name: Build React app
+        run: npm run build  # This creates the 'build' directory with the production-ready React app
+
+      # Step 5: Deploy to S3
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete  --exclude "*.git/*" 
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION:  ${{ secrets.AWS_REGION }}  # Optional: specify the AWS region
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # S3 bucket name stored in secrets
+          SOURCE_DIR: 'build'
